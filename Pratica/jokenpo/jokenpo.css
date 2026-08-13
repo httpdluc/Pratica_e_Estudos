@@ -17,20 +17,22 @@ body{
 }
 .game{
   display: grid;
-  grid-template: repeat(5,1f)/ 1fr;
+  grid-template: repeat(4,1f)/ 1fr;
   justify-content: center;
   align-items: center;
   margin: 100px;
   width: 500px;
   height: 500px;
-  border: solid;
+  background-color: #ffffff35;
+  border-radius: 24px;
 }
 .title{
-  grid-row:span 1;
+  grid-row: span 1;
   justify-self: center;
+  padding: 12px;
 }
 .elements{
-  grid-row:span 2;
+  grid-row:2/ 4 ;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -50,23 +52,40 @@ body{
 .rock:hover,
 .paper:hover,
 .scissors:hover{
-  background-color: #ffffff35;
   border: dotted 2px red;
 }
 
 .status{
-  justify-items: center;
-
+  width: 100%;
+  grid-row: span 3;
 }
 .res,
 .jogadores,
 .placar{
-  padding: 12px;
-  margin: 12px;
+  font-size: 16px;
+  font-weight: 200;
+  width: 100%;
+  text-align:center;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
 }
-.options{
+.res{
+  padding: 12px;
+}
 
-  grid-row: 5/ span 5 ;
+.jogador,
+.pc{
+  width: 150px;
+  padding: 10px;
+}
+.sinal{
+  width: 50px;
+}
+
+
+.options{
+  grid-row: span 4 ;
   display: flex;
   justify-content: space-around;
 }
@@ -83,5 +102,5 @@ body{
 .reset:hover,
 .autoplay:hover{
   color: #000;
-  background: #ffffff;
+  border: solid 2px #ffffff85;
 }

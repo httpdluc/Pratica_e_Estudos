@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Solway:wght@300;400;500;700;800&display=swap');
+
+*,
+*::after,
+*::before{
+  box-sizing: border-box;
+  margin: 0;
+}
+*{
+  font-family: 'Poppins';
+
+}
+
+body{
+  background-color: black;
+  color:white;
+}
+.game{
+  display: grid;
+  grid-template: repeat(5,1f)/ 1fr;
+  justify-content: center;
+  align-items: center;
+  margin: 100px;
+  width: 500px;
+  height: 500px;
+  border: solid;
+}
+.title{
+  grid-row:span 1;
+  justify-self: center;
+}
+.elements{
+  grid-row:span 2;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.rock,
+.paper,
+.scissors{
+  width: 100px;
+  height: 100px;
+  margin: 10px;
+  border: solid 2px white;
+  border-radius: 100px;
+  background-color: transparent;
+  font-size: 46px;
+  cursor: pointer;
+}
+.rock:hover,
+.paper:hover,
+.scissors:hover{
+  background-color: #ffffff35;
+  border: dotted 2px red;
+}
+
+.status{
+  justify-items: center;
+
+}
+.res,
+.jogadores,
+.placar{
+  padding: 12px;
+  margin: 12px;
+}
+.options{
+
+  grid-row: 5/ span 5 ;
+  display: flex;
+  justify-content: space-around;
+}
+.reset,
+.autoplay{
+  color: white;
+  background-color: #ffffff85;
+  width: 132px;
+  height: 42px;
+  border: none;
+  border-radius: 10px; 
+  cursor: pointer;
+}
+.reset:hover,
+.autoplay:hover{
+  color: #000;
+  background: #ffffff;
+}

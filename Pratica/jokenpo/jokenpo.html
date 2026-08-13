@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head></head>
+  <head>
+    <link rel="stylesheet" href="./jokenpo.css">
+  </head>
   <body>
-    <h1>Jokenpo</h1>
-    <h2 class="js-game-status">oi</h2>
-    <button>pedra</button>
-    <button>papel</button>
-    <button>tesoura</button>
-    <h2 class="js-res">vitória derrota</h2>
-    <h3 class="js-placar">placar</h3>
-    <button class="reset">resetar placar</button>
-    <button class="autoplay">jogo automático</button>
+    <main class="game">
+      <h1 class="title">Jokenpo</h1>
+      <div class="elements">
+        <button class="js-bt-rock rock">✊</button>
+        <button class="js-bt-paper paper">🖐️</button>
+        <button class="js-bt-scissors scissors">✌️</button>
+      </div>
+      <div class="status">
+        <h2 class="js-res res">vitória | derrota</h2>
+        <h3 class="jogadores">jogador x computador</h3>
+        <h3 class="js-placar placar">1-0</h3>
+      </div>
+      <div class="options">
+        <button class="js-bt-reset reset">resetar placar</button>
+        <button class="js-bt-autoplay autoplay">jogo automático</button>
+      </div>
+    </main>
+    <script src="./jokenpo.js"></script>
   </body>
 </html>

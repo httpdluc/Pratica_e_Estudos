@@ -14,13 +14,16 @@
 body{
   background-color: black;
   color:white;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .game{
   display: grid;
   grid-template: repeat(4,1f)/ 1fr;
   justify-content: center;
   align-items: center;
-  margin: 100px;
   width: 500px;
   height: 500px;
   background-color: #ffffff35;
@@ -37,9 +40,9 @@ body{
   justify-content: space-between;
   align-items: center;
 }
-.rock,
-.paper,
-.scissors{
+.pedra,
+.papel,
+.tesoura{
   width: 100px;
   height: 100px;
   margin: 10px;
@@ -49,9 +52,9 @@ body{
   font-size: 46px;
   cursor: pointer;
 }
-.rock:hover,
-.paper:hover,
-.scissors:hover{
+.pedra:hover,
+.papel:hover,
+.tesoura:hover{
   border: dotted 2px red;
 }
 
@@ -71,7 +74,7 @@ body{
   justify-content: space-around;
 }
 .res{
-  padding: 12px;
+  padding: 24px;
 }
 
 .jogador,

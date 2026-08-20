@@ -102,3 +102,7 @@ button:hover{
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 }
+p{
+  padding: 10px 20px 0 0;
+  font-size: 30px;
+}

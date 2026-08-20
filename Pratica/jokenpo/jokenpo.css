@@ -8,9 +8,7 @@
 }
 *{
   font-family: 'Poppins';
-
 }
-
 body{
   background-color: black;
   color:white;
@@ -57,7 +55,6 @@ body{
 .tesoura:hover{
   border: dotted 2px red;
 }
-
 .status{
   width: 100%;
   grid-row: span 3;
@@ -85,8 +82,6 @@ body{
 .sinal{
   width: 50px;
 }
-
-
 .options{
   grid-row: span 4 ;
   display: flex;

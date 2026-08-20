@@ -3,7 +3,6 @@
 :root{
   --color:#60519b;
 }
-
 *,
 *::after,
 *::before{
@@ -15,24 +14,21 @@
   font-size: 20px;
   color: #fff;
 }
-
 body{
-  background-color: #000;
+  background-color: #0f0f0f;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 95vh;
 }
-
 main{
   width: 400px;
   height: 400px;
-  background-color: #9c3d06;
   border-radius: 15px;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: dotted 2px #fff;
+  border: solid 2px rgb(204, 202, 202);
 }
 .layout{
   display: grid;
@@ -68,13 +64,12 @@ button:hover{
 .visor{
   grid-area: main;
   height: 120px;
-  border: dashed 1px rgb(204, 202, 202);
-  background-color: #0f0f0f;
+  border: solid 2px rgb(204, 202, 202);
+  background-color: #f1f1f15f;
   border-radius: 10px;
   text-align: right;
   margin-bottom: 15px;
 }
-
 .numeros{
   height: 190px;
   grid-area: num;

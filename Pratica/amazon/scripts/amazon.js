@@ -1,31 +1,5 @@
-const products = [{
-  id:'',
-  image:'images/products/athletic-cotton-socks-6-pairs.jpg',
-  name:'Meias Esportivas de Algodão Pretas e Cinzas - 6 Pares',
-  rating:{
-    stars:4.5,
-    count:87
-  },
-  priceCents: 1090
-},{
-  id:'',
-  image:'images/products/intermediate-composite-basketball.jpg',
-  name: 'Bola de basquete de tamanho intermediário',
-  rating:{
-    stars:4,
-    count:127
-  },
-  priceCents:2095
-},{
-  id:'',
-  image:'images/products/adults-plain-cotton-tshirt-2-pack-teal.jpg',
-  name:'Camiseta de Algodão Lisa para Adultos - Pacote com 2',
-  rating:{
-    stars:4.5,
-    count:56
-  },
-  priceCents:799
-}]; 
+import { products } from "../data/products.js";
+import { cart, addToCard } from "../data/cart.js";
 
 let productsHTML = '';
 
@@ -68,11 +42,29 @@ products.forEach((product) => {
         <img src="images/icons/checkmark.png">
         Added
       </div>
-      <button class="add-to-cart-button button-primary">
-        Add to Cart
+      <button class="add-to-cart-button button-primary js-add-to-cart"
+      data-product-id="${product.id}">
+        Adicionar ao carrinho
       </button>
     </div>
   `
 })
 
 document.querySelector('.js-products-grid').innerHTML = productsHTML;
+
+function updateCartQuantity(){
+  let cartQuantity = 0;
+  cart.forEach((cartItem)=>{
+    cartQuantity+= cartItem .quantity;
+  });
+  document.querySelector('.js-cart-quantity')
+    .innerHTML=cartQuantity;
+}
+
+document.querySelectorAll('.js-add-to-cart').forEach((button)=>{
+  button.addEventListener('click', () => {
+    const productId = button.dataset.productId;
+    addToCard(productId)
+    updateCartQuantity()
+  });
+});

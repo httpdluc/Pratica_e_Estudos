@@ -4,7 +4,7 @@
  }]
 
  export function addToCard(productId){
-  let matchingItem;
+  let matchingItem; 
 
   cart.forEach((cartItem)=> {
     if(productId === cartItem.productId){

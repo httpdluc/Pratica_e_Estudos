@@ -1,7 +1,6 @@
 class Main{
   static execute(){
-    const lines = [8];
-
+    
     const entrada = Number(lines[0]);
 
     let i = 0;

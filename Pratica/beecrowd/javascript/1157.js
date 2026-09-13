@@ -8,7 +8,6 @@ class Main{
         console.log(i)
       }
     }
-
   }
 }
 

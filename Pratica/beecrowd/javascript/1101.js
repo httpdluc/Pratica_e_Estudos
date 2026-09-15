@@ -1,7 +1,7 @@
 class Main{
   static execute(){
     for(let i=0 ; i<lines.length; i++){
-      const entrada = lines[i].split(' ').map(Number);
+
       const m = entrada[0]
       const n = entrada[1]
     

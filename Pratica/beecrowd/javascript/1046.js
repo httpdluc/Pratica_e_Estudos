@@ -1,13 +1,7 @@
 class Main{
   static executar(){
-
-    const entrada = lines[0].split(' ').map(Number);
-
-    const inicio = entrada[0]
-    const fim = entrada[1]
-
+    const [inicio, fim] = lines[0].split(' ').map(Number);
     let calculo=0;
-
     if(inicio === fim){
       calculo = 24;
     }else if(inicio > fim){

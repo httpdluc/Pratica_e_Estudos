@@ -4,8 +4,8 @@ class Main{
     let valor = 1;
 
     for(let i=1 ; i<=39 ; i+=2){
-      saida+= i/valor
-      valor*=2
+      saida+= i/valor;
+      valor*=2;
     }
 
     console.log(saida.toFixed(2))

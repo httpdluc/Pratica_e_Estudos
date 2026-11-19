@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercícios recomendado - Cap.1</title>
+  </head>
+
+  <body>
+    <div class="js-container"></div>
+
+    <script src="https://unpkg.com/supersimpledev/react.js"></script>
+    <script src="https://unpkg.com/supersimpledev/react-dom.js"></script>
+    <script src="https://unpkg.com/supersimpledev/babel.js"></script>
+
+    <script type="text/babel">
+
+      // Exercício 1a
+      function GoodJob(){
+        return(
+          <div>
+            <button>Good job!</button>
+          </div>
+        );
+      }
+
+      // Exercício 1b
+      function MyName(){
+        const name = 'Lucas';
+
+        return name;
+      }
+
+      // Exercício 1c
+      function Socks(){
+        const price = 10;
+
+        return(
+          <div>
+            <p>Cotton socks</p>
+            <p>Price: ${price}</p>
+            <button>Add to Cart</button>
+          </div>
+        );
+      }
+
+      // Exercício 1d, 1e e 1f
+      function ProductCost(){
+        const productCost = 10 + (8 * 2);
+        const shippingCost = 5;
+
+        return(
+          <div>
+            <p>Product cost: ${productCost.toFixed(2)}</p>
+            <p>Shipping cost: ${shippingCost.toFixed(2)}</p>
+            <p>Total cost: ${(productCost + shippingCost).toFixed(2)}</p>
+            <button>Place your order</button>
+          </div>
+        );
+      }
+
+      // Exercício 1g, 1h e 1i
+      function CurrentDate(){
+        const data = new Date();
+
+        const month = data.getMonth();
+        const day = data.getDate();
+
+        const monthName = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+
+        const hour = data.getHours();
+        const minutes = data.getMinutes();
+        const seconds = data.getSeconds();
+
+        return(
+          <div>
+            <p>Today is {monthName[month]} {day}</p>
+            <p>
+              Current time: {hour}:{minutes}:{seconds}
+            </p>
+          </div>
+        );
+      }
+
+      function App(){
+        return(
+          <>
+            <GoodJob />
+            <p>Meu nome é {MyName()}</p>
+            <Socks />
+            <ProductCost />
+            <CurrentDate />
+          </>
+        );
+      }
+
+      const container = document.querySelector('.js-container');
+      const root = ReactDOM.createRoot(container);
+      
+      root.render(<App />);
+
+      setInterval(() => {
+        root.render(<App />);
+      }, 1000);
+      
+    </script>
+  </body>
+</html>
